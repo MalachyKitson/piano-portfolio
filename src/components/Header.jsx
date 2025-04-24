@@ -53,6 +53,9 @@ const Header = ({ loaded }) => {
           }`}
         >
           MALACHY KITSON
+          <h1 className="text-white text-base md:text-xl lg:text2xl font-bold">
+            Pianist & Musician
+          </h1>
         </Link>
 
         <nav
