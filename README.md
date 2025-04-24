@@ -1,12 +1,28 @@
-# React + Vite
+# Malachy Kitson Music Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official personal portfolio website for **Malachy Kitson** — featuring original piano compositions, performances, and music-related content.
 
-Currently, two official plugins are available:
+Built with [React](https://react.dev/) and [Vite](https://vitejs.dev/), this site serves as a showcase of music, visual style, and project development by Malachy Kitson.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Getting Started (Local Development)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/MalachyKitson/piano-portfolio-website.git
+cd piano-portfolio-website/my-piano-portfolio
+npm install
+npm run dev
+```
+
+### `NOTICE` (for copyright/media protection)
+
+```text
+NOTICE
+
+This website contains original music compositions, photos, logos, and branding assets created by Malachy Kitson.
+
+All music, visual media, and personal content is protected by copyright and may not be used, reproduced, or distributed in any form without explicit written permission.
+
+© 2025 Malachy Kitson. All rights reserved.
+```
