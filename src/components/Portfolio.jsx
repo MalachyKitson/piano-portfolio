@@ -119,7 +119,7 @@ const Portfolio = () => {
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="px-4 py-2 text-sm font-semibold text-[var(--bgColour)] bg-[var(--textColour)] hover:text-[var(--textColour)] hover:bg-[var(--keyColour)] shadow-md transition-transform transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--keyColour)]"
+              className="px-4 py-2 text-sm font-semibold text-[var(--bgColour)] bg-[var(--textColour)] hover:text-[var(--textColour)] hover:bg-[var(--bg2colour)] shadow-md transition-transform transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--keyColour)]"
             >
               {section.title}
             </a>
