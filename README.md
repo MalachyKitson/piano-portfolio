@@ -9,7 +9,7 @@ Built with [React](https://react.dev/) and [Vite](https://vitejs.dev/), this sit
 ## Getting Started (Local Development)
 
 ```bash
-git clone https://github.com/MalachyKitson/piano-portfolio-website.git
+git clone https://github.com/MalachyKitson/piano-portfolio.git
 cd piano-portfolio-website/my-piano-portfolio
 npm install
 npm run dev
