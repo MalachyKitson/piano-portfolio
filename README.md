@@ -15,7 +15,7 @@ npm install
 npm run dev
 ```
 
-### `NOTICE` (for copyright/media protection)
+### `NOTICE`
 
 ```text
 NOTICE
