@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Replace with your actual domain when deployed
+Sitemap: https://malachykitsonmusic.com/sitemap.xml

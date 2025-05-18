@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import { Link } from "react-router-dom";
 const Loading = React.lazy(() => import("../components/Loading"));
 
 const LazyFaTiktok = React.lazy(() =>
@@ -15,8 +14,7 @@ const LazyFaYoutube = React.lazy(() =>
 const Footer = () => {
   const socials = {
     tiktok: import.meta.env.VITE_SOCIAL_TIKTOK || "https://www.tiktok.com",
-    instagram:
-      import.meta.env.VITE_SOCIAL_INSTAGRAM || "https://www.instagram.com",
+    instagram: import.meta.env.VITE_SOCIAL_INSTAGRAM || "https://www.instagram.com",
     youtube: import.meta.env.VITE_SOCIAL_YOUTUBE || "https://www.youtube.com",
   };
 
@@ -29,8 +27,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-[var(--bgColour)] text-[var(--textColour)] py-8 px-6">
-      <div className="max-w-md mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        <div className="mb-6 md:mb-0 text-center">
+      <div className="max-w-md mx-auto flex flex-col md:flex-row justify-center items-center text-center md:text-left">
+        <div className="mb-4 md:mb-0 md:pr-10 text-center">
           <h2 className="text-3xl font-bold text-[var(--textColour)]">
             Malachy Kitson
           </h2>
@@ -39,38 +37,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex flex-col space-y-2">
-          <Link
-            to="/"
-            onClick={scrollToTop}
-            className="text-sm hover:text-[var(--keyColour)] transition"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            onClick={scrollToTop}
-            className="text-sm hover:text-[var(--keyColour)] transition"
-          >
-            About
-          </Link>
-          <Link
-            to="/portfolio"
-            onClick={scrollToTop}
-            className="text-sm hover:text-[var(--keyColour)] transition"
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="/contact"
-            onClick={scrollToTop}
-            className="text-sm hover:text-[var(--keyColour)] transition"
-          >
-            Contact
-          </Link>
-        </div>
-
-        <div className="flex justify-center space-x-6 mt-6">
+        <div className="flex justify-center space-x-6 mt-2">
           <Suspense fallback={<Loading />}>
             <a
               href={socials.instagram}
