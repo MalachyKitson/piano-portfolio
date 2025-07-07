@@ -4,4 +4,16 @@
     <loc>https://malachykitsonmusic.com/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://malachykitsonmusic.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://malachykitsonmusic.com/music</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://malachykitsonmusic.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>

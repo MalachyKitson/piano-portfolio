@@ -46,7 +46,7 @@ function App() {
         "https://www.youtube.com/@malachykitsonmusic",
         "https://www.tiktok.com/@malachykitsonmusic"
       ],
-      "jobTitle": "Singer-Songwriter",
+      "jobTitle": "Artist Musician Singer-Songwriter",
       "description": "Malachy Kitson is a musician and singer-songwriter.",
       "gender": "Male"
     }
