@@ -2,9 +2,8 @@ import React, { Suspense } from "react";
 import Hero from "../components/Hero";
 
 const Loading = React.lazy(() => import("../components/Loading"));
-const Bio = React.lazy(() => import("../components/Bio"));
-const PortfolioDirect = React.lazy(() =>
-  import("../components/PortfolioDirect")
+const MusicDirect = React.lazy(() =>
+  import("../components/MusicDirect")
 );
 
 const Home = () => {
@@ -12,7 +11,7 @@ const Home = () => {
     <div>
       <Hero />
       <Suspense fallback={<Loading />}>
-        <PortfolioDirect />
+        <MusicDirect />
       </Suspense>
     </div>
   );

@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Malachy Kitson | Musician</title>
+        <title>Malachy Kitson | Official Website</title>
         <meta
           name="description"
           content="Official website of Malachy Kitson — Irish singer-songwriter and recording artist. Listen to music, watch videos, and get the latest updates."
@@ -43,8 +43,8 @@ function App() {
       "url": "https://malachykitsonmusic.com",
       "sameAs": [
         "https://www.instagram.com/malachykitsonmusic",
-        "https://www.youtube.com/channel/malachykitsonmusic",
-        "https://www.tiktok.com/malachykitsonmusic"
+        "https://www.youtube.com/@malachykitsonmusic",
+        "https://www.tiktok.com/@malachykitsonmusic"
       ],
       "jobTitle": "Singer-Songwriter",
       "description": "Malachy Kitson is a musician and singer-songwriter.",
