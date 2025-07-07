@@ -6,24 +6,20 @@ const MusicDirect = () => {
   const [currentVideo, setCurrentVideo] = useState(null);
 
   useEffect(() => {
-    const latestVideos = [
-      {
-        id: 1,
-        video: "https://www.youtube.com/embed/XdFpzaM07i0?si=lG4kz3s8omk6BeJq",
-        thumbnail: "https://img.youtube.com/vi/XdFpzaM07i0/hqdefault.jpg",
-      },
-      {
-        id: 2,
-        video: "https://www.youtube.com/embed/Hki6RqI-eMA?si=pTQO2CJm-MmdFYRi",
-        thumbnail: "https://img.youtube.com/vi/Hki6RqI-eMA/hqdefault.jpg",
-      },
-      {
-        id: 3,
-        video: "https://www.youtube.com/embed/Qt6YiVZLhG0?si=CQgxlbvB0pOkpz5U",
-        thumbnail: "https://img.youtube.com/vi/Qt6YiVZLhG0/hqdefault.jpg",
-      },
+    const sampleIds = [
+        "Hki6RqI-eMA",
+        "Hki6RqI-eMA",
+        "Hki6RqI-eMA",
     ];
-    setVideos(latestVideos);
+
+    const videoList = sampleIds.map((videoId, index) => ({
+      id: index + 1,
+      videoId,
+      video: `https://www.youtube.com/embed/${videoId}`,
+      thumbnail: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+    }));
+
+    setVideos(videoList);
   }, []);
 
   const openModal = (videoUrl) => {
@@ -48,10 +44,11 @@ const MusicDirect = () => {
             className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] max-w-md transition-transform duration-300 hover:scale-105 cursor-pointer"
             onClick={() => openModal(video.video)}
           >
-            <div className="aspect-[16/9]">
+            <div className="aspect-[16/9]">         
               <img
                 src={video.thumbnail}
                 alt="Music video thumbnail"
+                loading="lazy"
                 className="w-full h-full object-cover border-4 border-[var(--textColour)]"
               />
             </div>
@@ -69,7 +66,7 @@ const MusicDirect = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute -top-10 right-0 md:-right-2 lg:-right-10 text-[var(--textColour)] text-3xl font-bold"
+              className="absolute -top-10 right-0 md:-right-2 lg:-right-10 text-[var(--textColour)] hover:text-[var(--keyColour)] text-3xl font-bold transition-colours duration-300"
               onClick={closeModal}
             >
               ×

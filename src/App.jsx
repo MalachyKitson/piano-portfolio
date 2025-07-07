@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet";
 
 const Home = React.lazy(() => import("./components/Home"));
 const About = React.lazy(() => import("./components/About"));
-const Portfolio = React.lazy(() => import("./components/Portfolio"));
+const Music = React.lazy(() => import("./components/Music"));
 const Contact = React.lazy(() => import("./components/Contact"));
 const NotFound = React.lazy(() => import("./components/NotFound"));
 const Loading = React.lazy(() => import("./components/Loading"));
@@ -59,7 +59,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/music" element={<Music />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

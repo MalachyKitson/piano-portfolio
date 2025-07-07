@@ -127,7 +127,6 @@ export default function ContactPage() {
                   </div>
                 </div>
             </div>
-                      {/* Footer Text */}
                       <div className="mt-auto bg-[var(--bgColour)] text-center border-[var(--textColour)] w-full pb-8 md:pb-30">
 
 
@@ -136,7 +135,7 @@ export default function ContactPage() {
     href={`mailto:${email}`}
     className="relative font-light text-sm cursor-pointer"
   >
-    <span>email: {email}</span>
+    <span>- email: {email} -</span>
   </a>
 </div>
 

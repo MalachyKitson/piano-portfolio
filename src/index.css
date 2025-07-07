@@ -64,3 +64,11 @@ html, body {
 @keyframes l9-1 {
    100% {transform: rotate(calc(var(--s,1)*90deg))}
 }
+
+.masonry-column {
+  padding: 0;
+}
+
+.masonry-column > div {
+  margin-bottom: 1rem;
+}

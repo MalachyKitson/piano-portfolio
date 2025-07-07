@@ -79,7 +79,7 @@ const Header = ({ loaded }) => {
             ABOUT
           </Link>
           <Link
-            to="/portfolio"
+            to="/music"
             onClick={scrollToTop}
             className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors duration-400 group"
           >
@@ -161,7 +161,7 @@ const Header = ({ loaded }) => {
             ABOUT
           </Link>
           <Link
-            to="/portfolio"
+            to="/music"
             className="text-2xl font-bold text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] duration-400"
             onClick={toggleMenu}
           >
