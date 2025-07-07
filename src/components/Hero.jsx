@@ -1,6 +1,8 @@
 import React from "react";
-import heroImage from "../assets/DSC00093.webp";
-import heroImagexl from "../assets/DSC000932.webp";
+// import heroImage from "../assets/DSC00093.webp";
+// import heroImagexl from "../assets/DSC000932.webp";
+import heroImage from "../assets/DSC06998.webp";
+import heroImagexl from "../assets/DSC06998.webp";
 
 const Hero = () => {
   return (

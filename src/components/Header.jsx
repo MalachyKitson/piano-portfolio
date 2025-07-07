@@ -48,46 +48,47 @@ const Header = ({ loaded }) => {
         <Link
           to="/"
           onClick={scrollToTop}
-          className={`text-[var(--keyColour)] text-4xl font-black font-[Roboto] transition-all duration-2000 ${
+          className={`text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] text-4xl font-black font-[Roboto] transition-[transform,color] ${
             loaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
           }`}
+          style={{
+            transitionDuration: "2000ms, 400ms",
+            transitionProperty: "transform, color",
+          }}
         >
           MALACHY KITSON
-          <h1 className="text-white text-base md:text-xl lg:text2xl font-bold">
-            Pianist & Musician
-          </h1>
         </Link>
 
         <nav
-          className={`hidden pl-4 md:flex sm:space-x-6 space-x-8 transition-all duration-2000 ${
+          className={`hidden pl-4 md:flex sm:space-x-6 space-x-8 font-bold transition-all duration-2000 ${
             loaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
         >
           <Link
             to="/"
             onClick={scrollToTop}
-            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors group"
+            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] hover:font-[Roboto] transition-colors duration-400 group"
           >
             HOME
           </Link>
           <Link
             to="/about"
             onClick={scrollToTop}
-            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors group"
+            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors duration-400 group"
           >
             ABOUT
           </Link>
           <Link
             to="/portfolio"
             onClick={scrollToTop}
-            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors group"
+            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors duration-400 group"
           >
-            PORTFOLIO
+            LISTEN
           </Link>
           <Link
             to="/contact"
             onClick={scrollToTop}
-            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors group"
+            className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors duration-400 group"
           >
             CONTACT
           </Link>
@@ -97,7 +98,7 @@ const Header = ({ loaded }) => {
                 href={socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--keyColour)] transition-colors"
+                className="hover:text-[var(--keyColour)] transition-colors duration-400"
               >
                 <LazyFaInstagram size={20} />
               </a>
@@ -105,7 +106,7 @@ const Header = ({ loaded }) => {
                 href={socials.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--keyColour)] transition-colors"
+                className="hover:text-[var(--keyColour)] transition-colors duration-400"
               >
                 <LazyFaTiktok size={20} />
               </a>
@@ -113,7 +114,7 @@ const Header = ({ loaded }) => {
                 href={socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--keyColour)] transition-colors"
+                className="hover:text-[var(--keyColour)] transition-colors duration-400"
               >
                 <LazyFaYoutube size={20} />
               </a>
@@ -126,11 +127,7 @@ const Header = ({ loaded }) => {
             onClick={toggleMenu}
             className="focus:outline-none relative z-30"
           >
-            {menuOpen ? (
-              <FiX className="h-8 w-8 text-[var(--textHeaderColour)] opacity-100" />
-            ) : (
-              <FiMenu className="h-8 w-8 text-[var(--textHeaderColour)] opacity-100" />
-            )}
+            <FiMenu className="h-8 w-8 text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] cursor-pointer opacity-100 duration-400" />
           </button>
         </div>
       </div>
@@ -143,7 +140,7 @@ const Header = ({ loaded }) => {
         <div className="absolute top-16 right-16">
           <button
             onClick={toggleMenu}
-            className="text-[var(--textHeaderColour)] focus:outline-none"
+            className="text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] cursor-pointer focus:outline-none duration-400"
           >
             <FiX className="h-10 w-10" />
           </button>
@@ -151,28 +148,28 @@ const Header = ({ loaded }) => {
         <div className="flex flex-col items-center justify-center h-full space-y-6">
           <Link
             to="/"
-            className="text-2xl font-bold text-[var(--textHeaderColour)]"
+            className="text-2xl font-bold text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] duration-400"
             onClick={toggleMenu}
           >
             HOME
           </Link>
           <Link
             to="/about"
-            className="text-2xl font-bold text-[var(--textHeaderColour)]"
+            className="text-2xl font-bold text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] duration-400"
             onClick={toggleMenu}
           >
             ABOUT
           </Link>
           <Link
             to="/portfolio"
-            className="text-2xl font-bold text-[var(--textHeaderColour)]"
+            className="text-2xl font-bold text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] duration-400"
             onClick={toggleMenu}
           >
-            PORTFOLIO
+            LISTEN
           </Link>
           <Link
             to="/contact"
-            className="text-2xl font-bold text-[var(--textHeaderColour)]"
+            className="text-2xl font-bold text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] duration-400"
             onClick={toggleMenu}
           >
             CONTACT
@@ -183,7 +180,7 @@ const Header = ({ loaded }) => {
                 href={socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--textHeaderColour)] transition-colors"
+                className="text-[var(--textHeaderColour)] transition-colors hover:text-[var(--keyColour)] duration-400"
               >
                 <LazyFaInstagram size={24} />
               </a>
@@ -191,7 +188,7 @@ const Header = ({ loaded }) => {
                 href={socials.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--textHeaderColour)] transition-colors"
+                className="text-[var(--textHeaderColour)] transition-colors hover:text-[var(--keyColour)] duration-400"
               >
                 <LazyFaTiktok size={24} />
               </a>
@@ -199,7 +196,7 @@ const Header = ({ loaded }) => {
                 href={socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--textHeaderColour)] transition-colors"
+                className="text-[var(--textHeaderColour)] transition-colors hover:text-[var(--keyColour)] duration-400"
               >
                 <LazyFaYoutube size={24} />
               </a>

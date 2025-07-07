@@ -28,16 +28,13 @@ const Footer = () => {
   return (
     <footer className="bg-[var(--bgColour)] text-[var(--textColour)] py-8 px-6">
       <div className="max-w-md mx-auto flex flex-col md:flex-row justify-center items-center text-center md:text-left">
-        <div className="mb-4 md:mb-0 md:pr-10 text-center">
-          <h2 className="text-3xl font-bold text-[var(--textColour)]">
-            Malachy Kitson
+        <div className="mb-4 md:mb-0 md:pr-6 text-center">
+          <h2 className="text-2xl font-bold text-[var(--textColour)]">
+            MALACHY KITSON
           </h2>
-          <p className="text-sm text-[var(--textColour)] mt-2">
-            Pianist | Performer | Musician
-          </p>
         </div>
 
-        <div className="flex justify-center space-x-6 mt-2">
+        <div className="flex justify-center space-x-4">
           <Suspense fallback={<Loading />}>
             <a
               href={socials.instagram}

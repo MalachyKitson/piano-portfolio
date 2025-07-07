@@ -12,9 +12,6 @@ const Home = () => {
     <div>
       <Hero />
       <Suspense fallback={<Loading />}>
-        <Bio />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
         <PortfolioDirect />
       </Suspense>
     </div>

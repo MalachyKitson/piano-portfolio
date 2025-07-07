@@ -7,7 +7,7 @@ const Loading = () => {
       role="status"
       aria-label="Loading"
     >
-      <h1 className="text-xl font-normal mb-4 animate-pulse">LOADING...</h1>
+      <div class="loader"></div>
     </div>
   );
 };

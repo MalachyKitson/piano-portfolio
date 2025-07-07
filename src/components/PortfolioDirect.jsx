@@ -10,7 +10,7 @@ const PortfolioDirect = () => {
       <div className="absolute inset-0 bg-grain"></div>
       <section className="w-full max-w-7xl mx-auto px-6 py-16 md:py-24">
         <h2 className="text-5xl font-medium text-[var(--textColour)] text-center mb-10">
-          PORTFOLIO
+          LISTEN
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
