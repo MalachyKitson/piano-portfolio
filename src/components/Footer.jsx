@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[var(--bgColour)] text-[var(--textColour)] py-8 px-6">
+    <footer className="bg-[var(--footerColour)] text-[var(--textColour)] py-8 px-6">
       <div className="max-w-md mx-auto flex flex-col md:flex-row justify-center items-center text-center md:text-left">
         <div className="mb-4 md:mb-0 md:pr-6 text-center">
           <h2 className="text-2xl font-bold text-[var(--textColour)]">

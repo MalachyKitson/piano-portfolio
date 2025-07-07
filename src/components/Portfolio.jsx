@@ -112,7 +112,6 @@ const Portfolio = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen pt-30 p-10 bg-[var(--bgColour)]">
-      <div className="absolute inset-0 bg-grain"></div>
       <div className="w-full max-w-7xl mx-auto px-6 py-12 md:py-16">
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {portfolioSections.map((section) => (

@@ -5,14 +5,13 @@ import AboutImage from "../assets/DSC06998.webp";
 const About = () => {
   return (
     <div className="relative flex flex-col md:flex-row items-center justify-center md:h-screen h-full pt-30 p-10 bg-[var(--bgColour)]">
-      <div className="absolute inset-0 bg-grain"></div>
       <div className="flex flex-col items-center justify-center md:flex-row md:items-stretch w-full max-w-screen-lg space-y-10 md:space-y-0 md:space-x-10">
         <div className="relative flex-1 transition-all duration-300">
           <img
             src={AboutImage}
             alt="About"
             loading="lazy"
-            className="w-[21rem] h-[21rem] md:w-full md:h-full lg:w-[30rem] lg:h[40-rem] object-cover border-6 border-[var(--bgColour)] transition-all duration-300"
+            className="w-[21rem] h-[21rem] md:w-full md:h-full lg:w-[30rem] lg:h[40-rem] object-cover border-6 border-[var(--textColour)]"
           />
         </div>
         <div className="flex-1 pt-4 md:pt-0 flex flex-col justify-start text-[var(--textColour)]">

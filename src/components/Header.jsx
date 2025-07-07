@@ -48,7 +48,7 @@ const Header = ({ loaded }) => {
         <Link
           to="/"
           onClick={scrollToTop}
-          className={`text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] text-4xl font-black font-[Roboto] transition-[transform,color] ${
+          className={`hover:text-[var(--textHeaderColour)] text-[var(--keyColour)] text-4xl font-black font-[Roboto] transition-[transform,color] ${
             loaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
           }`}
           style={{
@@ -83,7 +83,7 @@ const Header = ({ loaded }) => {
             onClick={scrollToTop}
             className="relative text-[var(--textHeaderColour)] text-xl font-[Roboto] hover:text-[var(--keyColour)] transition-colors duration-400 group"
           >
-            LISTEN
+            MUSIC
           </Link>
           <Link
             to="/contact"
@@ -145,7 +145,7 @@ const Header = ({ loaded }) => {
             <FiX className="h-10 w-10" />
           </button>
         </div>
-        <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <div className="flex flex-col items-center justify-center h-full space-y-6 border-1 border-[var(--bgColour)]">
           <Link
             to="/"
             className="text-2xl font-bold text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] duration-400"
@@ -165,7 +165,7 @@ const Header = ({ loaded }) => {
             className="text-2xl font-bold text-[var(--textHeaderColour)] hover:text-[var(--keyColour)] duration-400"
             onClick={toggleMenu}
           >
-            LISTEN
+            MUSIC
           </Link>
           <Link
             to="/contact"

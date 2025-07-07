@@ -13,8 +13,9 @@
 @layer base {
   :root {
     --keyColour: oklch(60.9% 0.126 221.723);
+    --footerColour: oklch(20.5% 0 0);
     --textColour: oklch(0.985 0 0);
-    --bgColour: oklch(0.205 0 0);
+    --bgColour: oklch(14.5% 0 0);
     --bg2Colour: oklch(0.269 0 0);
     --textHeaderColour: oklch(0.985 0 0);
   }
