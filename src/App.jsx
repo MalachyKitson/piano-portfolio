@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./index.css";
 import { Analytics } from "@vercel/analytics/react";
+import { Helmet } from "react-helmet";
 
 const Home = React.lazy(() => import("./components/Home"));
 const About = React.lazy(() => import("./components/About"));
@@ -26,7 +27,33 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <>
+      <Helmet>
+        <title>Malachy Kitson | Musician</title>
+        <meta
+          name="description"
+          content="Official website of Malachy Kitson — Irish singer-songwriter and recording artist. Listen to music, watch videos, and get the latest updates."
+        />
+          <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Malachy Kitson",
+      "url": "https://malachykitsonmusic.com",
+      "sameAs": [
+        "https://www.instagram.com/malachykitsonmusic",
+        "https://www.youtube.com/channel/malachykitsonmusic",
+        "https://www.tiktok.com/malachykitsonmusic"
+      ],
+      "jobTitle": "Singer-Songwriter",
+      "description": "Malachy Kitson is a musician and singer-songwriter.",
+      "gender": "Male"
+    }
+    `}
+  </script>
+      </Helmet>
+      <Router>
       <Header loaded={loaded} />
       <Suspense fallback={<Loading />}>
         <Routes>
@@ -39,6 +66,7 @@ function App() {
       </Suspense>
       <Footer />
     </Router>
+    </>
   );
 }
 
