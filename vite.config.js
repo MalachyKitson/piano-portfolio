@@ -9,7 +9,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          components: ['./src/components/Portfolio.jsx', './src/components/About.jsx']
+          components: ['./src/components/Music.jsx', './src/components/About.jsx']
         }
       }
     }
