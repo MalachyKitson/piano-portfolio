@@ -1,5 +1,8 @@
-import React, { useState, } from 'react';
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import heroImage from '../assets/DSC06998.webp';
+
+const email = import.meta.env.VITE_CONTACT_EMAIL || "Email Not Available";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -14,16 +17,40 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted:', formData);
+
+    const templateParams = {
+      from_firstname: formData.firstName,
+      from_lastname: formData.lastName,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceID || !templateID || !publicKey) {
+      alert("Email service is not configured. Please try again later.");
+      return;
+    }
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then(() => {
+        alert('Message sent successfully!');
+        setFormData({ firstName: '', lastName: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        alert('Failed to send message. Please try again later.');
+      });
   };
 
-  const email = import.meta.env.VITE_CONTACT_EMAIL || "Email Not Available";
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || "Email Not Available";
 
   const handleEmailClick = (e) => {
     if (!import.meta.env.VITE_CONTACT_EMAIL) {
       e.preventDefault();
-      console.error("Email address not configured");
-      alert("Email address is not configured. Please try again later.");
+      alert("Email address is not configured.");
     }
   };
 
