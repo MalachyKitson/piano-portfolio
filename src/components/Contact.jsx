@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+
 import heroImage from '../assets/DSC06998.webp';
 
 const email = import.meta.env.VITE_CONTACT_EMAIL || "Email Not Available";
@@ -10,12 +12,25 @@ export default function ContactPage() {
     lastName: '',
     email: '',
     message: '',
+    phoneNumber: '', 
   });
+
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
+    if (formData.phoneNumber.trim() !== '') {
+      alert("Bot detected. Submission rejected.");
+      return;
+    }
+
+    if (!recaptchaToken) {
+      alert("Please complete the reCAPTCHA.");
+      return;
+    }
+
     e.preventDefault();
 
     const templateParams = {
@@ -85,6 +100,14 @@ export default function ContactPage() {
                                 First Name
                               </label>
                               <input
+                                type="text"
+                                name="phoneNumber"
+                                value={formData.phoneNumber}
+                                onChange={handleChange}
+                                className="hidden"
+                                autoComplete="off"
+                              />
+                              <input
                                 name="firstName"
                                 id="firstName"
                                 type="text"
@@ -141,6 +164,10 @@ export default function ContactPage() {
                           </div>
 
                           <div>
+                          <ReCAPTCHA
+                            sitekey="6Lc1THsrAAAAAOiiyW22-eag3f5BY_5bMSTvjkPC"
+                            onChange={(token) => setRecaptchaToken(token)}
+                          />
                             <button
                               type="submit"
                               className="px-6 py-2 border border-[var(--textColour)] uppercase text-sm rounded-md focus:outline-none hover:border-[var(--keyColour)] hover:bg-[var(--keyColour)] focus:border-[var(--textColour)] py-2 px-3 cursor-pointer transition-colors duration-200"
@@ -157,15 +184,20 @@ export default function ContactPage() {
                       <div className="mt-auto bg-[var(--bgColour)] text-center border-[var(--textColour)] w-full pb-8 md:pb-30">
 
 
-  <a
-    onClick={handleEmailClick}
-    href={`mailto:${email}`}
-    className="relative font-light text-sm cursor-pointer"
-  >
-    <span>- email: {email} -</span>
-  </a>
-</div>
-
-    </div>
-  );
-}
+                      <a
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.href = `mailto:${email.replace(/\s/g, '')}`;
+                        }}
+                        className="relative font-light text-sm cursor-pointer"
+                      >
+                        <span>
+                          - email: {email} -
+                        </span>
+                      </a>
+                      
+                      </div>
+                      
+                          </div>
+                        );
+                      }
