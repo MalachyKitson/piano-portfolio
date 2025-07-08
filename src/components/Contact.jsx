@@ -163,14 +163,15 @@ export default function ContactPage() {
                             />
                           </div>
 
-                          <div>
                           <ReCAPTCHA
                             sitekey="6Lc1THsrAAAAAOiiyW22-eag3f5BY_5bMSTvjkPC"
                             onChange={(token) => setRecaptchaToken(token)}
                           />
+
+                          <div>
                             <button
                               type="submit"
-                              className="px-6 py-2 border border-[var(--textColour)] uppercase text-sm rounded-md focus:outline-none hover:border-[var(--keyColour)] hover:bg-[var(--keyColour)] focus:border-[var(--textColour)] py-2 px-3 cursor-pointer transition-colors duration-200"
+                              className="px-6 py-2 border border-[var(--textColour)] uppercase text-sm rounded-md focus:outline-none hover:border-[var(--keyColour)] hover:bg-[var(--keyColour)] focus:border-[var(--textColour)] cursor-pointer transition-colors duration-200"
                             >
                               SUBMIT
                             </button>

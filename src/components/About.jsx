@@ -15,50 +15,27 @@ const About = () => {
           />
         </div>
         <div className="flex-1 pt-4 md:pt-0 flex flex-col justify-start text-[var(--textColour)]">
-          <p className="text-[var(--textColour)] text-4xl md:text-5xl font-black font-[Roboto] mb-4">
+          <p className="text-[var(--textColour)] text-4xl md:text-5xl font-black font-[Roboto] mb-2">
             ABOUT
           </p>
-          <p className="text-2xl font-[Roboto] mb-2">Hey I'm Malachy!</p>
-          <p className="text-base font-light font-[Roboto]">
-            I’m a <span className="font-bold">pianist and musician</span> from{" "}
+          <p className="text-2xl font-[Roboto] mb-4">Hey I'm Malachy!</p>
+          <p className="text-base font-light font-[Roboto] text-justify">
+            I’m a <span className="font-bold">Artist/Singer-Songwriter</span> from{" "}
             <span className="flag-cursor transition-all duration-300">
-              Ireland.
+              Ireland
             </span>{" "}
-            With over a <span className="font-bold">decade</span> of experience,
-            I’ve built my sound on a{" "}
-            <span className="font-bold">classical foundation</span>, while
-            embracing the
-            <span className="italic"> freedom </span> of jazz and blues. I make
-            music that feels right to me.
+            and I have been making music since I was 10 years old.
             <br />
             <br />
-            Every performance I give can be{" "}
-            <span className="font-bold">improvised and unique</span>, bringing
-            something fresh and spontaneous every time I play. I can create an
-            atmosphere that
-            <span className="italic"> fits the moment</span>.
+              I grew up playing <strong>piano and guitar</strong>, and I’ve been writing songs for as long as I can remember. 
+              Now I’m also learning how to <em>mix and produce everything myself</em> and I love being hands-on with every part of it and learning how to do everything.
             <br />
             <br />
-            My <span className="font-bold">classical training</span> gives me
-            the technical skill, while my love for jazz and blues lets me
-            <span className="italic"> break the rules</span> and craft
-            performances that feel{" "}
-            <span className="font-bold">right to me in the moment</span>.
+              I'm influenced by artists like <strong>Billie Eilish</strong>, <strong>Lizzy McAlpine</strong>, <strong>Tyler, the Creator</strong>, and of course <strong>Taylor Swift</strong>. 
+              But I also grew up with artists like <em>Fleetwood Mac, The Beatles, Queen, and ABBA</em>. 
             <br />
             <br />
-            Beyond piano, I’m also{" "}
-            <span className="font-bold">
-              classically trained in singing
-            </span>{" "}
-            and have performed in{" "}
-            <span className="font-bold">musicals and stage productions</span>.
-            While piano is my main instrument, I also play guitar and love
-            blending different styles and genres.
-            <br />
-            <br />
-            At the heart of it, I just love making music that feels honest. If
-            you ever want to get in touch, feel free I'm always happy to
-            connect.
+            <em>I make music because it matters to me, maybe it’ll matter to you too! :)</em>
           </p>
         </div>
       </div>
