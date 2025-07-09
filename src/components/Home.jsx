@@ -47,6 +47,8 @@ const Home = () => {
         <meta name="description" content="Official website of Malachy Kitson – Irish artist & singer-songwriter. Listen to music, watch videos, and get the latest updates." />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
           {JSON.stringify(websiteData)}
         </script>
       </Helmet>
