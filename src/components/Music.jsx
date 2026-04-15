@@ -8,15 +8,15 @@ const Music = () => {
 
   useEffect(() => {
     const sampleIds = [
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
+      "fJ9rUzIMcZQ",
+      "8UVNT4wvIGY",
+      "V9PVRfjEBTI",
+      "V9PVRfjEBTI",
+      "fJ9rUzIMcZQ",
+      "8UVNT4wvIGY",
+      "8UVNT4wvIGY",
+      "V9PVRfjEBTI",
+      "fJ9rUzIMcZQ",
     ];
 
     const videoList = sampleIds.map((videoId, index) => ({
@@ -40,7 +40,7 @@ const Music = () => {
       }
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -91,15 +91,15 @@ const Music = () => {
                       columns === 1
                         ? ""
                         : columns === 2
-                        ? "sm:w-[48%]"
-                        : "lg:w-[32.5%]"
+                          ? "sm:w-[48%]"
+                          : "lg:w-[32.5%]"
                     }`}
                     onClick={() => openModal(video.video)}
                   >
                     <img
                       src={video.thumbnail}
                       alt="Video Thumbnail"
-                    loading="lazy"
+                      loading="lazy"
                       className="w-full h-full object-cover"
                       draggable={false}
                     />

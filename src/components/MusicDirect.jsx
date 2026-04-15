@@ -6,11 +6,7 @@ const MusicDirect = () => {
   const [currentVideo, setCurrentVideo] = useState(null);
 
   useEffect(() => {
-    const sampleIds = [
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-        "Hki6RqI-eMA",
-    ];
+    const sampleIds = ["fJ9rUzIMcZQ", "8UVNT4wvIGY", "V9PVRfjEBTI"];
 
     const videoList = sampleIds.map((videoId, index) => ({
       id: index + 1,
@@ -44,7 +40,7 @@ const MusicDirect = () => {
             className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] max-w-md transition-transform duration-300 hover:scale-105 cursor-pointer"
             onClick={() => openModal(video.video)}
           >
-            <div className="aspect-[16/9]">         
+            <div className="aspect-[16/9]">
               <img
                 src={video.thumbnail}
                 alt="Music video thumbnail"
