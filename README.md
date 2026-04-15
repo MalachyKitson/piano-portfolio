@@ -1,6 +1,6 @@
 # Malachy Kitson Music Portfolio
 
-This is the official personal portfolio website for **Malachy Kitson** — featuring original piano compositions, performances, and music-related content.
+This is the official personal portfolio website for **Malachy Kitson**.
 
 Built with [React](https://react.dev/) and [Vite](https://vitejs.dev/), this site serves as a showcase of music, visual style, and project development by Malachy Kitson.
 
