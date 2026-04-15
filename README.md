@@ -15,9 +15,6 @@ npm install
 npm run dev
 ```
 
-### View Online
-You can view this portfolio live at: [Malachy Kitson Music Portfolio](https://malachykitsonmusic.vercel.app)
-
 ### `NOTICE`
 
 ```text
